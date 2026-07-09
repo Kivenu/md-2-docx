@@ -1,0 +1,22 @@
+# ref.yaml
+link-citations: true
+autoEqnLabels: true
+
+# 图设置
+figureTitle: "Fig."
+figPrefix: "Fig."
+figureTemplate: "**$$figureTitle$$ $$i$$.** $$t$$"  # 图编号加粗
+
+# 表格设置
+tableTitle: "Table"
+tblPrefix: "Table"
+tblCaptionDelim: "."
+tableTemplate: "**$$tableTitle$$ $$i$$.** $$t$$"   # 表编号加粗
+
+# 公式设置
+eqnPrefix: "Eq." #公式引用前缀
+
+# 参考文献
+reference-section-title: "Reference"
+bibliography: "BibTex/reference.bib"
+csl: "BibTex/knowledge-based-systems.csl"

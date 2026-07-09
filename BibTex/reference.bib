@@ -1,0 +1,815 @@
+% ===== INTRODUCTION =====
+
+% 癌症是提高人类预期寿命的瓶颈
+@article{bray2021ever,
+  title={The ever-increasing importance of cancer as a leading cause of premature death worldwide},
+  author={Bray, Freddie and Laversanne, Mathieu and Weiderpass, Elisabete and Soerjomataram, Isabelle},
+  journal={Cancer},
+  volume={127},
+  number={16},
+  pages={3029--3030},
+  year={2021},
+  publisher={Wiley Online Library}
+}
+
+@article{li2024umbrella,
+  title={An umbrella review of socioeconomic status and cancer},
+  author={Li, Shen and He, Yuxin and Liu, Jifeng and Chen, Kefan and Yang, Yuzhao and Tao, Kai and Yang, Jiaqing and Luo, Kui and Ma, Xuelei},
+  journal={Nature Communications},
+  volume={15},
+  number={1},
+  pages={9993},
+  year={2024},
+  publisher={Nature Publishing Group UK London}
+}
+
+% genome profiles of cancers cell lines导致不同patients有不同治疗反应
+@article{garnett2012systematic,
+  title={Systematic identification of genomic markers of drug sensitivity in cancer cells},
+  author={Garnett, Mathew J and Edelman, Elena J and Heidorn, Sonja J and Greenman, Chris D and Dastur, Anahita and Lau, King Wai and Greninger, Patricia and Thompson, I Richard and Luo, Xi and Soares, Jorge and others},
+  journal={Nature},
+  volume={483},
+  number={7391},
+  pages={570--575},
+  year={2012},
+  publisher={Nature Publishing Group UK London}
+}
+
+% 传统靶向药物discovery需要大量实验, 成本高
+@article{chen2016drug,
+  title={Drug--target interaction prediction: databases, web servers and computational models},
+  author={Chen, Xing and Yan, Chenggang Clarence and Zhang, Xiaotian and Zhang, Xu and Dai, Feng and Yin, Jian and Zhang, Yongdong},
+  journal={Briefings in bioinformatics},
+  volume={17},
+  number={4},
+  pages={696--712},
+  year={2016},
+  publisher={Oxford University Press}
+}
+
+% GDSC
+@article{yang2012genomics,
+  title={Genomics of Drug Sensitivity in Cancer (GDSC): a resource for therapeutic biomarker discovery in cancer cells},
+  author={Yang, Wanjuan and Soares, Jorge and Greninger, Patricia and Edelman, Elena J and Lightfoot, Howard and Forbes, Simon and Bindal, Nidhi and Beare, Dave and Smith, James A and Thompson, I Richard and others},
+  journal={Nucleic acids research},
+  volume={41},
+  number={D1},
+  pages={D955--D961},
+  year={2012},
+  publisher={Oxford University Press}
+}
+
+% CCLE
+@article{barretina2012cancer,
+  title={The Cancer Cell Line Encyclopedia enables predictive modelling of anticancer drug sensitivity},
+  author={Barretina, Jordi and Caponigro, Giordano and Stransky, Nicolas and Venkatesan, Kavitha and Margolin, Adam A and Kim, Sungjoon and Wilson, Christopher J and Leh{\'a}r, Joseph and Kryukov, Gregory V and Sonkin, Dmitriy and others},
+  journal={Nature},
+  volume={483},
+  number={7391},
+  pages={603--607},
+  year={2012},
+  publisher={Nature Publishing Group UK London}
+}
+
+% gene expression profiles可以较好表现癌症细胞系特征
+@article{ding2016evaluating,
+  title={Evaluating the molecule-based prediction of clinical drug responses in cancer},
+  author={Ding, Zijian and Zu, Songpeng and Gu, Jin},
+  journal={Bioinformatics},
+  volume={32},
+  number={19},
+  pages={2891--2895},
+  year={2016},
+  publisher={Oxford University Press}
+}
+
+% 基于机器学习的药物反应预测方法
+% DNN
+@article{li2019deepdsc,
+  title={DeepDSC: a deep learning method to predict drug sensitivity of cancer cell lines},
+  author={Li, Min and Wang, Yake and Zheng, Ruiqing and Shi, Xinghua and Li, Yaohang and Wu, Fang-Xiang and Wang, Jianxin},
+  journal={IEEE/ACM transactions on computational biology and bioinformatics},
+  volume={18},
+  number={2},
+  pages={575--582},
+  year={2019},
+  publisher={IEEE}
+}
+
+% tCNNS
+@article{liu2019improving,
+  title={Improving prediction of phenotypic drug response on cancer cell lines using deep convolutional network},
+  author={Liu, Pengfei and Li, Hongjian and Li, Shuai and Leung, Kwong-Sak},
+  journal={BMC bioinformatics},
+  volume={20},
+  number={1},
+  pages={408},
+  year={2019},
+  publisher={Springer}
+}
+% NIHGCN(证明基因表达单组学确实有效)
+@article{peng2022predicting,
+  title={Predicting cancer drug response using parallel heterogeneous graph convolutional networks with neighborhood interactions},
+  author={Peng, Wei and Liu, Hancheng and Dai, Wei and Yu, Ning and Wang, Jianxin},
+  journal={Bioinformatics},
+  volume={38},
+  number={19},
+  pages={4546--4553},
+  year={2022},
+  publisher={Oxford University Press}
+}
+
+% GNN在药物发现中的优秀表现
+@article{huang2022coadti,
+  title={CoaDTI: multi-modal co-attention based framework for drug--target interaction annotation},
+  author={Huang, Lei and Lin, Jiecong and Liu, Rui and Zheng, Zetian and Meng, Lingkuan and Chen, Xingjian and Li, Xiangtao and Wong, Ka-Chun},
+  journal={Briefings in bioinformatics},
+  volume={23},
+  number={6},
+  pages={bbac446},
+  year={2022},
+  publisher={Oxford University Press}
+}
+% GNN在药物发现中的优秀表现
+@article{gaudelet2021utilizing,
+  title={Utilizing graph machine learning within drug discovery and development},
+  author={Gaudelet, Thomas and Day, Ben and Jamasb, Arian R and Soman, Jyothish and Regep, Cristian and Liu, Gertrude and Hayter, Jeremy BR and Vickers, Richard and Roberts, Charles and Tang, Jian and others},
+  journal={Briefings in bioinformatics},
+  volume={22},
+  number={6},
+  year={2021},
+  publisher={Oxford Academic}
+}
+
+
+% 相似药物和相似细胞系存在类似响应
+@article{zhang2018novel,
+  title={A novel heterogeneous network-based method for drug response prediction in cancer cell lines},
+  author={Zhang, Fei and Wang, Minghui and Xi, Jianing and Yang, Jianghong and Li, Ao},
+  journal={Scientific reports},
+  volume={8},
+  number={1},
+  pages={3355},
+  year={2018},
+  publisher={Nature Publishing Group UK London}
+}
+
+% 相似药物和相似细胞系存在类似响应
+@article{wang2017improved,
+  title={Improved anticancer drug response prediction in cell lines using matrix factorization with similarity regularization},
+  author={Wang, Lin and Li, Xiaozhong and Zhang, Louxin and Gao, Qiang},
+  journal={BMC cancer},
+  volume={17},
+  number={1},
+  pages={513},
+  year={2017},
+  publisher={Springer}
+}
+
+% 一些方法构建同构节点相似性边
+% pipenode
+@article{xu2025cancer,
+  title={Cancer--drug response prediction via feature aggregation and association graph learning},
+  author={Xu, Kaiyi and Wang, Minhui and Zou, Xin and Ji, Chengfu and Zhou, Hua and Tang, Chang},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={151},
+  pages={110671},
+  year={2025},
+  publisher={Elsevier}
+}
+
+@article{peng2024hierarchical,
+  title={Hierarchical graph representation learning with multi-granularity features for anti-cancer drug response prediction},
+  author={Peng, Wei and Lin, Jiangzhen and Dai, Wei and Yu, Ning and Wang, Jianxin},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  year={2024},
+  publisher={IEEE}
+}
+% 多组学信息互补的优势 MOLI
+@article{sharifi2019moli,
+  title={MOLI: multi-omics late integration with deep neural networks for drug response prediction},
+  author={Sharifi-Noghabi, Hossein and Zolotareva, Olga and Collins, Colin C and Ester, Martin},
+  journal={Bioinformatics},
+  volume={35},
+  number={14},
+  pages={i501--i509},
+  year={2019},
+  publisher={Oxford University Press}
+}
+
+% limitation: 多组学信息融合欠缺
+% 简单拼接
+@ARTICLE{9484775,
+  author={Nguyen, Giang T.T. and Vu, Hoa D. and Le, Duc-Hau},
+  journal={IEEE/ACM Transactions on Computational Biology and Bioinformatics}, 
+  title={Integrating Molecular Graph Data of Drugs and Multiple -Omic Data of Cell Lines for Drug Response Prediction}, 
+  year={2022},
+  volume={19},
+  number={2},
+  pages={710-717},
+  keywords={Drugs;Computer architecture;Microprocessors;Germanium;Genomics;Bioinformatics;Feature extraction;Drug response prediction;integrating -omic data;graph convolutional network;convolutional neural network},
+  doi={10.1109/TCBB.2021.3096960}}
+
+% DeepCDR
+@article{liu2020deepcdr,
+  title={DeepCDR: a hybrid graph convolutional network for predicting cancer drug response},
+  author={Liu, Qiao and Hu, Zhiqiang and Jiang, Rui and Zhou, Mu},
+  journal={Bioinformatics},
+  volume={36},
+  number={Supplement\_2},
+  pages={i911--i918},
+  year={2020},
+  publisher={Oxford University Press}
+}
+
+% GraphCDR
+@article{liu2022graphcdr,
+  title={GraphCDR: a graph neural network method with contrastive learning for cancer drug response prediction},
+  author={Liu, Xuan and Song, Congzhi and Huang, Feng and Fu, Haitao and Xiao, Wenjie and Zhang, Wen},
+  journal={Briefings in Bioinformatics},
+  volume={23},
+  number={1},
+  pages={bbab457},
+  year={2022},
+  publisher={Oxford University Press}
+}
+
+% 和MOFGCN一样, 组学融合没有考虑重要性
+@article{wang2023gadrp,
+  title={GADRP: graph convolutional networks and autoencoders for cancer drug response prediction},
+  author={Wang, Hong and Dai, Chong and Wen, Yuqi and Wang, Xiaoqi and Liu, Wenjuan and He, Song and Bo, Xiaochen and Peng, Shaoliang},
+  journal={Briefings in Bioinformatics},
+  volume={24},
+  number={1},
+  year={2023},
+  publisher={Oxford Academic}
+}
+% 和MOFGCN一样, 组学融合没有考虑重要性
+@article{wang2023prediction,
+  title={The prediction of drug sensitivity by multi-omics fusion reveals the heterogeneity of drug response in pan-cancer},
+  author={Wang, Cong and Zhang, Mengyan and Zhao, Jiyun and Li, Bin and Xiao, Xingjun and Zhang, Yan},
+  journal={Computers in Biology and Medicine},
+  volume={163},
+  pages={107220},
+  year={2023},
+  publisher={Elsevier}
+}
+
+% MOFGCN
+@article{peng2021predicting,
+  title={Predicting drug response based on multi-omics fusion and graph convolution},
+  author={Peng, Wei and Chen, Tielin and Dai, Wei},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  volume={26},
+  number={3},
+  pages={1384--1393},
+  year={2021},
+  publisher={IEEE}
+}
+
+% 异构图方法
+@article{song2025gnndrp,
+  title={GNNDRP: Graph Neural Network With Multi-Task Learning for Drug Response Prediction},
+  author={Song, Congzhi and Liu, Xuan and Xiong, Zhankun and Liu, Luotao and Zhang, Wen},
+  journal={IEEE Transactions on Computational Biology and Bioinformatics},
+  year={2025},
+  publisher={IEEE}
+}
+
+% ReDCDR
+@article{xu2024redcdr,
+  title={RedCDR: dual relation distillation for cancer drug response prediction},
+  author={Xu, Muhao and Zhu, Zhenfeng and Zhao, Yawei and He, Kunlun and Huang, Qinghua and Zhao, Yao},
+  journal={IEEE/ACM Transactions on Computational Biology and Bioinformatics},
+  volume={21},
+  number={5},
+  pages={1468--1479},
+  year={2024},
+  publisher={IEEE}
+}
+
+% DeepAEG,和Red一样后期融合
+@article{lao2024deepaeg,
+  title={DeepAEG: a model for predicting cancer drug response based on data enhancement and edge-collaborative update strategies},
+  author={Lao, Chuanqi and Zheng, Pengfei and Chen, Hongyang and Liu, Qiao and An, Feng and Li, Zhao},
+  journal={BMC bioinformatics},
+  volume={25},
+  number={1},
+  pages={105},
+  year={2024},
+  publisher={Springer}
+}
+
+% HCLGT-DRP
+@article{zhang2025hclgt,
+  title={HCLGT-DRP: Hypergraph contrastive learning and graph transformer for drug response prediction},
+  author={Zhang, Wen and Qiu, Hang},
+  journal={Expert Systems with Applications},
+  pages={129320},
+  year={2025},
+  publisher={Elsevier}
+}
+
+% 假超图
+@article{peng2025predicting,
+  title={Predicting Anti-Cancer Drug Response Based on Hypergraph Representation Learning},
+  author={Peng, Wei and Xu, Xinyue and Lin, Jiangzhen and Chen, Gong and Dai, Wei and Fu, Xiaodong and Liu, Li and Liu, Lijun and Yu, Ning},
+  journal={IEEE Transactions on Computational Biology and Bioinformatics},
+  year={2025},
+  publisher={IEEE}
+}
+
+% SoftHGCN
+@article{lei2025softhgnn,
+  title={Softhgnn: Soft hypergraph neural networks for general visual recognition},
+  author={Lei, Mengqi and Wu, Yihong and Li, Siqi and Zheng, Xinhu and Wang, Juan and Gao, Yue and Du, Shaoyi},
+  journal={arXiv preprint arXiv:2505.15325},
+  year={2025}
+}
+
+
+% ============ RELATED WORKS ============
+% HMM-GDAN(融合多组学、多视图、多尺度信息)
+@article{liu2023hmm,
+  title={HMM-GDAN: Hybrid multi-view and multi-scale graph duplex-attention networks for drug response prediction in cancer},
+  author={Liu, Youfa and Tong, Shufan and Chen, Yongyong},
+  journal={Neural Networks},
+  volume={167},
+  pages={213--222},
+  year={2023},
+  publisher={Elsevier}
+}
+
+@article{li2025integrating,
+  title={Integrating edge features and complementary attention mechanism for drug response prediction},
+  author={Li, Chuang and Wang, Minhui and Tang, Chang and Zhu, Yanfeng},
+  journal={Knowledge-Based Systems},
+  pages={113508},
+  year={2025},
+  publisher={Elsevier}
+}
+
+% 第二类, association-based图
+% GraphDRP
+@article{nguyen2021graph,
+  title={Graph convolutional networks for drug response prediction},
+  author={Nguyen, Tuan and Nguyen, Giang TT and Nguyen, Thin and Le, Duc-Hau},
+  journal={IEEE/ACM transactions on computational biology and bioinformatics},
+  volume={19},
+  number={1},
+  pages={146--154},
+  year={2021},
+  publisher={IEEE}
+}
+
+% DeepCDR
+@article{liu2020deepcdr,
+  title={DeepCDR: a hybrid graph convolutional network for predicting cancer drug response},
+  author={Liu, Qiao and Hu, Zhiqiang and Jiang, Rui and Zhou, Mu},
+  journal={Bioinformatics},
+  volume={36},
+  number={Supplement\_2},
+  pages={i911--i918},
+  year={2020},
+  publisher={Oxford University Press}
+}
+
+% NIHGCN
+@article{peng2022predicting,
+  title={Predicting cancer drug response using parallel heterogeneous graph convolutional networks with neighborhood interactions},
+  author={Peng, Wei and Liu, Hancheng and Dai, Wei and Yu, Ning and Wang, Jianxin},
+  journal={Bioinformatics},
+  volume={38},
+  number={19},
+  pages={4546--4553},
+  year={2022},
+  publisher={Oxford University Press}
+}
+
+% ASGCL
+@article{dong2025asgcl,
+  title={ASGCL: Adaptive Sparse Mapping-based graph contrastive learning network for cancer drug response prediction},
+  author={Dong, Yunyun and Zhang, Yuanrong and Qian, Yuhua and Zhao, Yiming and Yang, Ziting and Feng, Xiufang},
+  journal={PLOS Computational Biology},
+  volume={21},
+  number={1},
+  pages={e1012748},
+  year={2025},
+  publisher={Public Library of Science San Francisco, CA USA}
+}
+
+% 超图学习
+% 超图
+@inproceedings{jiang2019dynamic,
+  title={Dynamic hypergraph neural networks.},
+  author={Jiang, Jianwen and Wei, Yuxuan and Feng, Yifan and Cao, Jingxuan and Gao, Yue},
+  booktitle={IJCAI},
+  pages={2635--2641},
+  year={2019}
+}
+
+% 超图
+@inproceedings{feng2019hypergraph,
+  title={Hypergraph neural networks},
+  author={Feng, Yifan and You, Haoxuan and Zhang, Zizhao and Ji, Rongrong and Gao, Yue},
+  booktitle={Proceedings of the AAAI conference on artificial intelligence},
+  volume={33},
+  number={01},
+  pages={3558--3565},
+  year={2019}
+}
+
+% HGCN
+@article{bai2021hypergraph,
+  title={Hypergraph convolution and hypergraph attention},
+  author={Bai, Song and Zhang, Feihu and Torr, Philip HS},
+  journal={Pattern Recognition},
+  volume={110},
+  pages={107637},
+  year={2021},
+  publisher={Elsevier}
+}
+
+% 疾病关联预测
+@inproceedings{liu2023multi,
+  title={Multi-view contrastive learning hypergraph neural network for drug-microbe-disease association prediction},
+  author={Liu, Luotao and Huang, Feng and Liu, Xuan and Xiong, Zhankun and Li, Menglu and Song, Congzhi and Zhang, Wen},
+  booktitle={Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence},
+  pages={4829--4837},
+  year={2023}
+}
+
+% ========== EXPERIMENTS ==========
+% COSMIC 基因突变数据
+@article{sondka2018cosmic,
+  title={The COSMIC Cancer Gene Census: describing genetic dysfunction across all human cancers},
+  author={Sondka, Zbyslaw and Bamford, Sally and Cole, Charlotte G and Ward, Sari A and Dunham, Ian and Forbes, Simon A},
+  journal={Nature Reviews Cancer},
+  volume={18},
+  number={11},
+  pages={696--705},
+  year={2018},
+  publisher={Nature Publishing Group UK London}
+}
+
+% PubChem
+@article{kim2019pubchem,
+  title={PubChem 2019 update: improved access to chemical data},
+  author={Kim, Sunghwan and Chen, Jie and Cheng, Tiejun and Gindulyte, Asta and He, Jia and He, Siqian and Li, Qingliang and Shoemaker, Benjamin A and Thiessen, Paul A and Yu, Bo and others},
+  journal={Nucleic acids research},
+  volume={47},
+  number={D1},
+  pages={D1102--D1109},
+  year={2019},
+  publisher={Oxford University Press}
+}
+
+% SMILES 2 Molecular Graph
+@article{duvenaud2015convolutional,
+  title={Convolutional networks on graphs for learning molecular fingerprints},
+  author={Duvenaud, David K and Maclaurin, Dougal and Iparraguirre, Jorge and Bombarell, Rafael and Hirzel, Timothy and Aspuru-Guzik, Al{\'a}n and Adams, Ryan P},
+  journal={Advances in neural information processing systems},
+  volume={28},
+  year={2015}
+}
+
+% CCLE 二值化response方法
+@article{dong2015anticancer,
+  title={Anticancer drug sensitivity prediction in cell lines from baseline gene expression through recursive feature selection},
+  author={Dong, Zuoli and Zhang, Naiqian and Li, Chun and Wang, Haiyun and Fang, Yun and Wang, Jun and Zheng, Xiaoqi},
+  journal={BMC cancer},
+  volume={15},
+  number={1},
+  pages={489},
+  year={2015},
+  publisher={Springer}
+}
+
+
+
+% =======图拓扑结构Metrics========
+% 网络弹性定义
+@article{sterbenz2010resilience,
+  title={Resilience and survivability in communication networks: Strategies, principles, and survey of disciplines},
+  author={Sterbenz, James PG and Hutchison, David and {\c{C}}etinkaya, Egemen K and Jabbar, Abdul and Rohrer, Justin P and Sch{\"o}ller, Marcus and Smith, Paul},
+  journal={Computer networks},
+  volume={54},
+  number={8},
+  pages={1245--1265},
+  year={2010},
+  publisher={Elsevier}
+}
+
+% Algebraic connectivity of graphs
+@article{fiedler1973algebraic,
+  title={Algebraic connectivity of graphs},
+  author={Fiedler, Miroslav},
+  journal={Czechoslovak mathematical journal},
+  volume={23},
+  number={2},
+  pages={298--305},
+  year={1973},
+  publisher={Institute of Mathematics, Academy of Sciences of the Czech Republic}
+}
+
+% Natural Connectivity
+@article{wu2011spectral,
+  title={Spectral measure of structural robustness in complex networks},
+  author={Wu, Jun and Barahona, Mauricio and Tan, Yue-Jin and Deng, Hong-Zhong},
+  journal={IEEE Transactions on Systems, Man, and Cybernetics-Part A: Systems and Humans},
+  volume={41},
+  number={6},
+  pages={1244--1252},
+  year={2011},
+  publisher={IEEE}
+}
+
+% 总的
+@inproceedings{alenazi2015comprehensive,
+  title={Comprehensive comparison and accuracy of graph metrics in predicting network resilience},
+  author={Alenazi, Mohammed JF and Sterbenz, James PG},
+  booktitle={2015 11th international conference on the design of reliable communication networks (DRCN)},
+  pages={157--164},
+  year={2015},
+  organization={IEEE}
+}
+
+
+@article{tizghadam2009autonomic,
+  title={Autonomic traffic engineering for network robustness},
+  author={Tizghadam, Ali and Leon-Garcia, Alberto},
+  journal={IEEE journal on selected areas in communications},
+  volume={28},
+  number={1},
+  pages={39--50},
+  year={2009},
+  publisher={IEEE}
+}
+C*指标
+@article{wang2014improving,
+  title={Improving robustness of complex networks via the effective graph resistance},
+  author={Wang, Xiangrong and Pournaras, Evangelos and Kooij, Robert E and Van Mieghem, Piet},
+  journal={The European Physical Journal B},
+  volume={87},
+  number={9},
+  pages={221},
+  year={2014},
+  publisher={Springer}
+}
+% 超图自然连通度计算
+@article{traversa2023robustness,
+  title={Robustness and complexity of directed and weighted metabolic hypergraphs},
+  author={Traversa, Pietro and Ferraz de Arruda, Guilherme and Vazquez, Alexei and Moreno, Yamir},
+  journal={Entropy},
+  volume={25},
+  number={11},
+  pages={1537},
+  year={2023},
+  publisher={MDPI}
+}
+
+% 随机remove or add 超边验证鲁棒性
+@inproceedings{cai2022hypergraph,
+  title={Hypergraph Structure Learning for Hypergraph Neural Networks.},
+  author={Cai, Derun and Song, Moxian and Sun, Chenxi and Zhang, Baofeng and Hong, Shenda and Li, Hongyan},
+  booktitle={IJCAI},
+  pages={1923--1929},
+  year={2022}
+}
+
+
+% ablation中阈值化adaptive 超图
+@article{zhang2025prediction,
+  title={Prediction of cancer drug response based on heterogeneous graph neural networks and multi-omics data},
+  author={Zhang, Junming and Xiong, Shuwen and Xu, Yugui and Zhang, Yongqing},
+  journal={Neural Networks},
+  pages={108001},
+  year={2025},
+  publisher={Elsevier}
+}
+
+% visualization t-SNE
+@article{maaten2008visualizing,
+  title={Visualizing data using t-SNE},
+  author={Maaten, Laurens van der and Hinton, Geoffrey},
+  journal={Journal of machine learning research},
+  volume={9},
+  number={Nov},
+  pages={2579--2605},
+  year={2008}
+}
+
+% ======== Case Study
+@article{PARK2012104,
+title = {Dasatinib synergizes with both cytotoxic and signal transduction inhibitors in heterogeneous breast cancer cell lines – Lessons for design of combination targeted therapy},
+journal = {Cancer Letters},
+volume = {320},
+number = {1},
+pages = {104-110},
+year = {2012},
+issn = {0304-3835},
+doi = {https://doi.org/10.1016/j.canlet.2012.01.039},
+url = {https://www.sciencedirect.com/science/article/pii/S0304383512000833},
+author = {Brian J. Park and Zakary L. Whichard and Seth J. Corey},
+keywords = {Dasatinib, Combination index, Rapamycin, Molecular targeted therapy},
+abstract = {Molecularly targeted therapies have emerged as the leading theme in cancer therapeutics. Multi-cytotoxic drug regimens have been highly successful, yet many studies in targeted therapeutics have centered on a single agent. We investigated whether the Src/Abl kinase inhibitor dasatinib displays synergy with other agents in molecularly heterogeneous breast cancer cell lines. MCF-7, SKBR-3, and MDA-MB-231 display different signaling and gene signatures profiles due to expression of the estrogen receptor, ErbB2, or neither. Cell proliferation was measured following treatment with dasatinib±cytotoxic (paclitaxel, ixabepilone) or molecularly targeted agents (tamoxifen, rapamycin, sorafenib, pan PI3K inhibitor LY294002, and MEK/ERK inhibitor U0126). Dose-responses for single or combination drugs were calculated and analyzed by the Chou–Talalay method. The drugs with the greatest level of synergy with dasatinib were rapamycin, ixabepilone, and sorafenib, for the MDA-MB-231, MCF-7, and SK-BR-3 cell lines respectively. However, dasatinib synergized with both cytotoxic and molecularly targeted agents in all three molecularly heterogeneous breast cancer cell lines. These results suggest that effectiveness of rationally designed therapies may not entirely rest on precise identification of gene signatures or molecular profiling. Since a systems analysis that reveals emergent properties cannot be easily performed for each cancer case, multi-drug regimens in the near future will still involve empirical design.}
+}
+
+@article{roseweir2016nuclear,
+  title={Nuclear expression of Lyn, a Src family kinase member, is associated with poor prognosis in renal cancer patients},
+  author={Roseweir, Antonia K and Qayyum, Tahir and Lim, Zhi and Hammond, Rachel and MacDonald, Alasdair I and Fraser, Sioban and Oades, Grenville M and Aitchison, Michael and Jones, Robert J and Edwards, Joanne},
+  journal={BMC cancer},
+  volume={16},
+  number={1},
+  pages={229},
+  year={2016},
+  publisher={Springer}
+}
+
+@article{sen2012kinase,
+  title={Kinase-impaired BRAF mutations in lung cancer confer sensitivity to dasatinib},
+  author={Sen, Banibrata and Peng, Shaohua and Tang, Ximing and Erickson, Heidi S and Galindo, Hector and Mazumdar, Tuhina and Stewart, David J and Wistuba, Ignacio and Johnson, Faye M},
+  journal={Science translational medicine},
+  volume={4},
+  number={136},
+  pages={136ra70--136ra70},
+  year={2012},
+  publisher={American Association for the Advancement of Science}
+}
+
+@article{levy2009akt,
+  title={AKT inhibitor, GSK690693, induces growth inhibition and apoptosis in acute lymphoblastic leukemia cell lines},
+  author={Levy, Dana S and Kahana, Jason A and Kumar, Rakesh},
+  journal={Blood, The Journal of the American Society of Hematology},
+  volume={113},
+  number={8},
+  pages={1723--1729},
+  year={2009},
+  publisher={American Society of Hematology Washington, DC}
+}
+
+@article{korkola2015decoupling,
+  title={Decoupling of the PI3K pathway via mutation necessitates combinatorial treatment in HER2+ breast cancer},
+  author={Korkola, James E and Collisson, Eric A and Heiser, Laura and Oates, Chris and Bayani, Nora and Itani, Sleiman and Esch, Amanda and Thompson, Wallace and Griffith, Obi L and Wang, Nicholas J and others},
+  journal={PloS one},
+  volume={10},
+  number={7},
+  pages={e0133219},
+  year={2015},
+  publisher={Public Library of Science San Francisco, CA USA}
+}
+
+% ========= Discussion ==========
+% 考虑更多组学
+@article{li2023mmcl,
+  title={MMCL-CDR: enhancing cancer drug response prediction with multi-omics and morphology images contrastive representation learning},
+  author={Li, Yang and Guo, Zihou and Gao, Xin and Wang, Guohua},
+  journal={Bioinformatics},
+  volume={39},
+  number={12},
+  pages={btad734},
+  year={2023},
+  publisher={Oxford University Press}
+}
+
+% drug-genes association
+@article{tao2023prediction,
+  title={Prediction of multi-relational drug--gene interaction via dynamic hypergraph contrastive learning},
+  author={Tao, Wen and Liu, Yuansheng and Lin, Xuan and Song, Bosheng and Zeng, Xiangxiang},
+  journal={Briefings in Bioinformatics},
+  volume={24},
+  number={6},
+  year={2023},
+  publisher={Oxford Academic}
+}
+
+% protein-protein interaction
+@article{zhu2022tgsa,
+  title={TGSA: protein--protein association-based twin graph neural networks for drug response prediction with similarity augmentation},
+  author={Zhu, Yiheng and Ouyang, Zhenqiu and Chen, Wenbo and Feng, Ruiwei and Chen, Danny Z and Cao, Ji and Wu, Jian},
+  journal={Bioinformatics},
+  volume={38},
+  number={2},
+  pages={461--468},
+  year={2022},
+  publisher={Oxford University Press}
+}
+
+% 可解释性
+@article{xiang2025explainmix,
+  title={ExplainMIX: Explaining Drug Response Prediction in Directed Graph Neural Networks with Multi-Omics Fusion},
+  author={Xiang, Ying and Li, Xiaodi and Gao, Qian and Xia, Junfeng and Yue, Zhenyu},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  year={2025},
+  publisher={IEEE}
+}
+
+@article{shi2025drexplainer,
+  title={DRExplainer: Quantifiable interpretability in drug response prediction with directed graph convolutional network},
+  author={Shi, Haoyuan and Xu, Tao and Li, Xiaodi and Gao, Qian and Xiong, Zhiwei and Xia, Junfeng and Yue, Zhenyu},
+  journal={Artificial Intelligence in Medicine},
+  volume={163},
+  pages={103101},
+  year={2025},
+  publisher={Elsevier}
+}
+
+# 自适应超图 (阈值截断稀疏化激活)
+@inproceedings{qiu2020dgcn,
+  title={Dgcn: Dynamic graph convolutional network for efficient multi-person pose estimation},
+  author={Qiu, Zhongwei and Qiu, Kai and Fu, Jianlong and Fu, Dongmei},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={07},
+  pages={11924--11931},
+  year={2020}
+}
+
+# 自适应超图(直接阈值)
+@inproceedings{xu2022adaptive,
+  title={Adaptive hypergraph neural network for multi-person pose estimation},
+  author={Xu, Xixia and Zou, Qi and Lin, Xue},
+  booktitle={Proceedings of the AAAI conference on artificial intelligence},
+  volume={36},
+  number={3},
+  pages={2955--2963},
+  year={2022}
+}
+
+#阈值激活
+@article{zhang2025prediction,
+  title={Prediction of cancer drug response based on heterogeneous graph neural networks and multi-omics data},
+  author={Zhang, Junming and Xiong, Shuwen and Xu, Yugui and Zhang, Yongqing},
+  journal={Neural Networks},
+  pages={108001},
+  year={2025},
+  publisher={Elsevier}
+}
+#激活函数生物学解释
+@article{nguyen2022sparse,
+  title={SPARSE: a sparse hypergraph neural network for learning multiple types of latent combinations to accurately predict drug--drug interactions},
+  author={Nguyen, Duc Anh and Nguyen, Canh Hao and Petschner, Peter and Mamitsuka, Hiroshi},
+  journal={Bioinformatics},
+  volume={38},
+  number={Supplement\_1},
+  pages={i333--i341},
+  year={2022},
+  publisher={Oxford University Press}
+}
+
+@article{dong2015anticancer,
+  title={Anticancer drug sensitivity prediction in cell lines from baseline gene expression through recursive feature selection},
+  author={Dong, Zuoli and Zhang, Naiqian and Li, Chun and Wang, Haiyun and Fang, Yun and Wang, Jun and Zheng, Xiaoqi},
+  journal={BMC cancer},
+  volume={15},
+  number={1},
+  pages={489},
+  year={2015},
+  publisher={Springer}
+}
+
+@article{he2024clop,
+  title={CLOP-hERG: The contrastive learning optimized pre-trained model for representation learning in predicting drug-induced hERG channel blockers},
+  author={He, Shida and Ye, Xiucai and Sakurai, Tetsuya},
+  journal={Medinformatics},
+  volume={1},
+  number={3},
+  pages={103--111},
+  year={2024},
+  publisher={BON VIEW PUBLISHING PTE}
+}
+
+% TCGA
+@article{cancer2013cancer,
+  title={The cancer genome atlas pan-cancer analysis project},
+  author={Cancer Genome Atlas Research Network, JN and others},
+  journal={Nat. Genet},
+  volume={45},
+  number={10},
+  pages={1113--1120},
+  year={2013}
+}
+
+% TCGA注释处理
+@article{ding2016evaluating,
+  title={Evaluating the molecule-based prediction of clinical drug responses in cancer},
+  author={Ding, Zijian and Zu, Songpeng and Gu, Jin},
+  journal={Bioinformatics},
+  volume={32},
+  number={19},
+  pages={2891--2895},
+  year={2016},
+  publisher={Oxford University Press}
+}
+
+% 阈值0.8的原因
+@article{staunton2001chemosensitivity,
+  title={Chemosensitivity prediction by transcriptional profiling},
+  author={Staunton, Jane E and Slonim, Donna K and Coller, Hilary A and Tamayo, Pablo and Angelo, Michael J and Park, Johnny and Scherf, Uwe and Lee, Jae K and Reinhold, William O and Weinstein, John N and others},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={98},
+  number={19},
+  pages={10787--10792},
+  year={2001},
+  publisher={The National Academy of Sciences}
+}

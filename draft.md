@@ -18,7 +18,7 @@ As illustrated in [@fig:limitations].
 
 
 
-Table citation example:
+***Table citation example:***
 
 \- Table caption:
 
@@ -34,3 +34,20 @@ Table: Summary of sample and feature statistics across the GDSC, CCLE, and TCGA 
 \- Table reference:
 
 [@tbl:Datasets] presents the summary...
+
+
+
+
+
+***export setting:***
+
+```zsh
+pandoc paper.md \
+  --filter pandoc-crossref \
+  --citeproc \
+  --metadata-file=ref.yaml \
+  -o paperout.docx \
+  -w docx \
+  --reference-doc=Assets/Manuscript_sbr.docx
+```
+
